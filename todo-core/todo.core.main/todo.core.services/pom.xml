@@ -12,4 +12,25 @@
 	<groupId>todo.core.services</groupId>
 	<artifactId>todo.core.services</artifactId>
 	<name>todo.core.services</name>
+	<dependencies>
+		<dependency>
+			<groupId>todo.core.common</groupId>
+			<artifactId>todo.core.common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.domain</groupId>
+			<artifactId>todo.core.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.dao</groupId>
+			<artifactId>todo.core.dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+	</dependencies>
 </project>
