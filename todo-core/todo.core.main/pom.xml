@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>todo.core</groupId>
@@ -12,42 +14,145 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<springboot.version>2.2.4.RELEASE</springboot.version>
+		<swagger_version>2.9.2</swagger_version>
+		<spring_framework_version>5.2.3.RELEASE</spring_framework_version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-				<version>${spring.boot.version}</version>
-			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
-				<version>${spring.boot.version}</version>
+				<version>${springboot.version}</version>
+				<scope>test</scope>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter</artifactId>
-				<version>${spring.boot.version}</version>
+				<version>${springboot.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-data-jpa</artifactId>
-				<version>${spring.boot.version}</version>
+				<version>${springboot.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-devtools</artifactId>
-				<version>${spring.boot.version}</version>
+				<version>${springboot.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jdbc</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-mongodb</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-cache -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-cache</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-activemq</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-batch -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-batch</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-quartz -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-quartz</artifactId>
-				<version>${spring.boot.version}</version>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-elasticsearch -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb-reactive -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis-reactive -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-cassandra -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-cassandra</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-cassandra-reactive -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-cassandra-reactive</artifactId>
+				<version>${springboot.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-social-linkedin -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-social-linkedin</artifactId>
+				<version>1.5.22.RELEASE</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-social-facebook -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-social-facebook</artifactId>
+				<version>1.5.22.RELEASE</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-social-twitter -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-social-twitter</artifactId>
+				<version>1.5.22.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${swagger_version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring_framework_version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -61,11 +166,11 @@
 		</dependency>
 	</dependencies>
 
-  <modules>
-    <module>todo.core.common</module>
-    <module>todo.core.dao</module>
-    <module>todo.core.domain</module>
-    <module>todo.core.services</module>
-    <module>todo.core.ta.main</module>
-  </modules>
+	<modules>
+		<module>todo.core.common</module>
+		<module>todo.core.dao</module>
+		<module>todo.core.domain</module>
+		<module>todo.core.services</module>
+		<module>todo.core.ta.main</module>
+	</modules>
 </project>
