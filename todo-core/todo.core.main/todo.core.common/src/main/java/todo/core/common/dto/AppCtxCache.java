@@ -8,7 +8,7 @@ public class AppCtxCache {
 	private Map<String, Object> ctxData = new HashMap<>();
 
 	public Map<String, Object> getCtxData() {
-		return ctxData;
+		return this.ctxData;
 	}
 
 	public void setCtxData(Map<String, Object> ctxData) {
