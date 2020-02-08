@@ -12,4 +12,11 @@
 	<groupId>todo.core.dao</groupId>
 	<artifactId>todo.core.dao</artifactId>
 	<name>todo.core.dao</name>
+	<dependencies>
+		<dependency>
+			<groupId>todo.core.domain</groupId>
+			<artifactId>todo.core.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>

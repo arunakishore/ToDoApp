@@ -4,7 +4,7 @@ import java.util.Date;
 
 import todo.core.domain.BaseDomain;
 
-public interface Task extends BaseDomain {
+public interface Project extends BaseDomain {
 
 	String getName();
 
@@ -14,10 +14,6 @@ public interface Task extends BaseDomain {
 
 	void setDescription(String description);
 
-	Long getProjectPK();
-
-	void setProjectPK(Long projectPK);
-
 	Date getStartDate();
 
 	void setStartDate(Date startDate);
@@ -25,13 +21,5 @@ public interface Task extends BaseDomain {
 	Date getEndDate();
 
 	void setEndDate(Date endDate);
-
-	Double getPlannedTotalTime();
-
-	void setPlannedTotalTime(Double plannedTotalTime);
-
-	Double getActualTotalTime();
-
-	void setActualTotalTime(Double actualTotalTime);
 
 }
