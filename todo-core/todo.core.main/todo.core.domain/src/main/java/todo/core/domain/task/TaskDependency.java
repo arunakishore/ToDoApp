@@ -4,6 +4,8 @@ import todo.core.domain.BaseDomain;
 
 public interface TaskDependency extends BaseDomain {
 
+	String DOMAIN_TYPE = "TaskDependency";
+
 	Long getTaskPK();
 
 	void setTaskPK(Long taskPK);

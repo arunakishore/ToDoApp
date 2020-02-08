@@ -4,6 +4,8 @@ import todo.core.domain.BaseDomain;
 
 public interface User extends BaseDomain {
 
+	String DOMAIN_TYPE = "User";
+
 	String getFirstName();
 
 	void setFirstName(String firstName);

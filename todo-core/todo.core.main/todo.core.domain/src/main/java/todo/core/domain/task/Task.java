@@ -6,6 +6,8 @@ import todo.core.domain.BaseDomain;
 
 public interface Task extends BaseDomain {
 
+	String DOMAIN_TYPE = "Task";
+
 	String getName();
 
 	void setName(String name);
