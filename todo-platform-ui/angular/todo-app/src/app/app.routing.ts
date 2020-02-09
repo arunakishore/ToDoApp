@@ -21,15 +21,6 @@ export const AppRoutes: Routes = [
     }, {
         path: 'todoadmin',
         loadChildren: './to-do-admin/to-do-admin.module#ToDoAdminModule'
-    }, {
-        path: 'calendar',
-        loadChildren: './calendar/calendar.module#CalendarModule'
-    }, {
-        path: '',
-        loadChildren: './userpage/user.module#UserModule'
-    }, {
-        path: '',
-        loadChildren: './timeline/timeline.module#TimelineModule'
     }
   ]}, {
       path: '',
