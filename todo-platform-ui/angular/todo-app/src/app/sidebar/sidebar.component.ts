@@ -26,6 +26,18 @@ export const ROUTES: RouteInfo[] = [{
         title: 'Dashboard',
         type: 'link',
         icontype: 'dashboard'
+    }, {
+        path: '/todoadmin',
+        title: 'To Do Administration',
+        type: 'sub',
+        icontype: 'apps',
+        collapse: 'todoadmin',
+        children: [
+            { path: 'accounts', title: 'Accounts', ab: 'A' },
+            { path: 'users', title: 'Users', ab: 'U' },
+            { path: 'accountusers', title: 'Account Users', ab: 'AU' },
+            { path: 'projects', title: 'Projects', ab: 'P' },
+        ]
     },{
         path: '/components',
         title: 'Components',
