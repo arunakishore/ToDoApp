@@ -7,7 +7,7 @@ import { ProjectsComponent } from './projects/projects.component';
 
 export const ToDoComponentsRoutes: Routes = [
     {
-      path: 'todoadmin',
+      path: '',
       children: [ 
         {
           path: 'accounts',

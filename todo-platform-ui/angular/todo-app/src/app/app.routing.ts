@@ -19,20 +19,8 @@ export const AppRoutes: Routes = [
         path: 'components',
         loadChildren: './components/components.module#ComponentsModule'
     }, {
-        path: 'forms',
-        loadChildren: './forms/forms.module#Forms'
-    }, {
-        path: 'tables',
-        loadChildren: './tables/tables.module#TablesModule'
-    }, {
-        path: 'maps',
-        loadChildren: './maps/maps.module#MapsModule'
-    }, {
-        path: 'widgets',
-        loadChildren: './widgets/widgets.module#WidgetsModule'
-    }, {
-        path: 'charts',
-        loadChildren: './charts/charts.module#ChartsModule'
+        path: 'todoadmin',
+        loadChildren: './to-do-admin/to-do-admin.module#ToDoAdminModule'
     }, {
         path: 'calendar',
         loadChildren: './calendar/calendar.module#CalendarModule'
