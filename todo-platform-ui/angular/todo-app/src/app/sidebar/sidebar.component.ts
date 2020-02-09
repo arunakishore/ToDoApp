@@ -35,7 +35,7 @@ export const ROUTES: RouteInfo[] = [{
         children: [
             { path: 'accounts', title: 'Accounts', ab: 'A' },
             { path: 'users', title: 'Users', ab: 'U' },
-            { path: 'accountusers', title: 'Account Users', ab: 'AU' },
+            { path: 'account-users', title: 'Account Users', ab: 'AU' },
             { path: 'projects', title: 'Projects', ab: 'P' },
         ]
     },{
