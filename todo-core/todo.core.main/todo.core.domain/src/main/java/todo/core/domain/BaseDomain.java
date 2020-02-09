@@ -2,11 +2,11 @@ package todo.core.domain;
 
 public interface BaseDomain {
 
-	default Long getPk() {
+	default Long getPK() {
 		return null;
 	}
 
-	default void setPk(Long pk) {
+	default void setPK(Long pk) {
 	}
 
 	default String getStatus() {
