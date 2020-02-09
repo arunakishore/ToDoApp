@@ -3,9 +3,9 @@ package todo.core.ta.rdbms.dao.impl.account;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import todo.core.domain.account.Account;
+import todo.core.ta.rdbms.domain.account.AccountImpl;
 
 @Repository
-public interface AccountCrudRepositoryImpl extends CrudRepository<Account, Long> {
+public interface AccountCrudRepositoryImpl extends CrudRepository<AccountImpl, Long> {
 
 }

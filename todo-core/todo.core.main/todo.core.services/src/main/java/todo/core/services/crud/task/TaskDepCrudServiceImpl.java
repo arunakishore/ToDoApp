@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import todo.core.common.dto.GlobalCtxAware;
 import todo.core.dao.crud.AppCrudDao;
-import todo.core.dao.crud.task.TaskDependencyCrudDao;
+import todo.core.dao.crud.task.TaskDepCrudDao;
 import todo.core.domain.task.TaskDependency;
 import todo.core.services.crud.AppCrudServiceImpl;
 
@@ -19,7 +19,7 @@ public class TaskDepCrudServiceImpl extends AppCrudServiceImpl<TaskDependency> i
 
 	@Override
 	public AppCrudDao<TaskDependency> getAppCrudDao() throws Exception {
-		return GlobalCtxAware.appCtx.getBean(this.acctCrudDaoBeanId, TaskDependencyCrudDao.class);
+		return GlobalCtxAware.appCtx.getBean(this.acctCrudDaoBeanId, TaskDepCrudDao.class);
 	}
 
 }
