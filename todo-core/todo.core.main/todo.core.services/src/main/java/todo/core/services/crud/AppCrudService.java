@@ -14,9 +14,9 @@ public interface AppCrudService<T extends BaseDomain> {
 
 	void deleteAll() throws Exception;
 
-	T findByPk(Long domainId) throws Exception;
+	T getDomainUsingPk(Long domainId) throws Exception;
 
-	List<T> getAll() throws Exception;
+	Iterable<T> getAll() throws Exception;
 
 	default void batchCreate(List<T> domains) throws Exception {
 

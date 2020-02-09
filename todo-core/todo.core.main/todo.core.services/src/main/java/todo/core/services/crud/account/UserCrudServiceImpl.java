@@ -17,6 +17,7 @@ public class UserCrudServiceImpl extends AppCrudServiceImpl<User> implements Use
 		this.userCrudDaoBeanId = GlobalCtxAware.buildAppCrudDaoLookupBeanId(User.DOMAIN_TYPE);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public AppCrudDao<User> getAppCrudDao() throws Exception {
 		return GlobalCtxAware.appCtx.getBean(this.userCrudDaoBeanId, UserCrudDao.class);

@@ -1,7 +1,5 @@
 package todo.core.services.crud;
 
-import java.util.List;
-
 import todo.core.dao.crud.AppCrudDao;
 import todo.core.domain.BaseDomain;
 
@@ -21,7 +19,7 @@ public abstract class AppCrudServiceImpl<T extends BaseDomain> implements AppCru
 
 	@Override
 	public void deleteByPk(Long domainId) throws Exception {
-		this.getAppCrudDao().deleteByPk(domainId);
+		this.getAppCrudDao().deleteUsingPk(domainId);
 	}
 
 	@Override
@@ -30,13 +28,13 @@ public abstract class AppCrudServiceImpl<T extends BaseDomain> implements AppCru
 	}
 
 	@Override
-	public T findByPk(Long domainId) throws Exception {
-		return this.getAppCrudDao().findByPk(domainId);
+	public T getDomainUsingPk(Long domainId) throws Exception {
+		return this.getAppCrudDao().getDomainUsingPk(domainId);
 	}
 
 	@Override
-	public List<T> getAll() throws Exception {
-		return this.getAppCrudDao().getAll();
+	public Iterable<T> getAll() throws Exception {
+		return this.getAppCrudDao().getAllDomains();
 	}
 
 }
