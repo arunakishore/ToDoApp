@@ -9,14 +9,29 @@
 		<artifactId>todo.core.main</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>todo.core.domain</groupId>
-	<artifactId>todo.core.domain</artifactId>
-	<name>todo.core.domain</name>
+	<groupId>todo.core.web</groupId>
+	<artifactId>todo.core.web</artifactId>
+	<name>todo.core.web</name>
 	<dependencies>
 		<dependency>
 			<groupId>todo.core.common</groupId>
 			<artifactId>todo.core.common</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.domain</groupId>
+			<artifactId>todo.core.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.services</groupId>
+			<artifactId>todo.core.services</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>

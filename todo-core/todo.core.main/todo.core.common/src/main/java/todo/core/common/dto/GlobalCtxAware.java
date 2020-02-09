@@ -32,7 +32,10 @@ public class GlobalCtxAware implements ApplicationContextAware {
 	}
 
 	public static String buildAppCrudDaoLookupBeanId(String domainType) {
+		return crudDAOImplDefaultDBType + DBTypes.CRUD_DAO_IMPL_BEAN_ID_SEP_CHAR + domainType;
+	}
 
+	public static String buildAppDomainFactLookupBeanId(String domainType) {
 		return crudDAOImplDefaultDBType + DBTypes.CRUD_DAO_IMPL_BEAN_ID_SEP_CHAR + domainType;
 	}
 

@@ -2,24 +2,32 @@ package todo.core.services.crud;
 
 import todo.core.dao.crud.AppCrudDao;
 import todo.core.domain.BaseDomain;
+import todo.core.domain.BaseDomainForm;
+import todo.core.domain.DomainFactory;
 
-public abstract class AppCrudServiceImpl<T extends BaseDomain> implements AppCrudService<T> {
+public abstract class AppCrudServiceImpl<T extends BaseDomain, F extends BaseDomainForm>
+		implements AppCrudService<T, F> {
 
 	public abstract AppCrudDao<T> getAppCrudDao() throws Exception;
 
+	public abstract DomainFactory<T, F> getDomainFactory();
+
 	@Override
-	public T create(T domain) throws Exception {
+	public T create(F domainForm) throws Exception {
+
+		T domain = getDomainFactory().createAndPopulateUsingForm(domainForm);
 		return this.getAppCrudDao().create(domain);
 	}
 
 	@Override
-	public T update(T domain) throws Exception {
+	public T update(F domainForm) throws Exception {
+		T domain = getDomainFactory().createAndPopulateUsingForm(domainForm);
 		return this.getAppCrudDao().update(domain);
 	}
 
 	@Override
-	public void deleteByPk(Long domainId) throws Exception {
-		this.getAppCrudDao().deleteUsingPk(domainId);
+	public void deleteDomainUsingPk(F domainForm) throws Exception {
+		this.getAppCrudDao().deleteUsingPk(domainForm.getDomainId());
 	}
 
 	@Override
@@ -28,8 +36,8 @@ public abstract class AppCrudServiceImpl<T extends BaseDomain> implements AppCru
 	}
 
 	@Override
-	public T getDomainUsingPk(Long domainId) throws Exception {
-		return this.getAppCrudDao().getDomainUsingPk(domainId);
+	public T getDomainUsingPk(F domainForm) throws Exception {
+		return this.getAppCrudDao().getDomainUsingPk(domainForm.getDomainId());
 	}
 
 	@Override

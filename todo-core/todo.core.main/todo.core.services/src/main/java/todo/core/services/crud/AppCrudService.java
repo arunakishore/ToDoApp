@@ -1,24 +1,23 @@
 package todo.core.services.crud;
 
-import java.util.List;
-
 import todo.core.domain.BaseDomain;
+import todo.core.domain.BaseDomainForm;
 
-public interface AppCrudService<T extends BaseDomain> {
+public interface AppCrudService<T extends BaseDomain, F extends BaseDomainForm> {
 
-	T create(T domain) throws Exception;
+	T create(F domainForm) throws Exception;
 
-	T update(T domain) throws Exception;
+	T update(F domainForm) throws Exception;
 
-	void deleteByPk(Long domainId) throws Exception;
+	void deleteDomainUsingPk(F domainForm) throws Exception;
 
 	void deleteAll() throws Exception;
 
-	T getDomainUsingPk(Long domainId) throws Exception;
+	T getDomainUsingPk(F domainForm) throws Exception;
 
 	Iterable<T> getAll() throws Exception;
 
-	default void batchCreate(List<T> domains) throws Exception {
+	default void batchCreate(F domainForm) throws Exception {
 
 	}
 }
