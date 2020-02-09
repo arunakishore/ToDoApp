@@ -8,10 +8,16 @@ import { ProjectsComponent } from './projects/projects.component';
 export const ToDoComponentsRoutes: Routes = [
     {
       path: '',
-      children: [ 
+      children: [
         {
           path: 'accounts',
-          component: AccountsComponent
+          component: AccountsComponent,
+          children: [
+            {
+              path: 'create',
+              component: AccountsComponent
+            }
+          ]
         },
         {
           path: 'users',

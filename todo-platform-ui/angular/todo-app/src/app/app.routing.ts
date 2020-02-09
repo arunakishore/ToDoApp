@@ -29,5 +29,9 @@ export const AppRoutes: Routes = [
         path: 'pages',
         loadChildren: './pages/pages.module#PagesModule'
       }]
-    }
+  }, {
+    path: '**',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  }
 ];

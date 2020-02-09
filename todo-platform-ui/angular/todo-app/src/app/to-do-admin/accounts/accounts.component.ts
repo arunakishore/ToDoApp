@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare interface DataTable {
   headerRow: string[];
@@ -17,7 +18,7 @@ export class AccountsComponent implements OnInit, AfterViewInit {
 
   public dataTable: DataTable;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.dataTable = {
@@ -106,7 +107,7 @@ export class AccountsComponent implements OnInit, AfterViewInit {
       e.preventDefault();
     });
 
-    //Like record
+    // Like record
     table.on('click', '.like', function (e) {
       alert('You clicked on Like button');
       e.preventDefault();
