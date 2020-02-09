@@ -73,12 +73,11 @@ export class DashboardComponent implements OnInit, AfterViewInit {
       this.tableData = {
           headerRow: ['ID', 'Name', 'Salary', 'Country', 'City'],
           dataRows: [
-              ['US', 'USA', '2.920	', '53.23%'],
-              ['DE', 'Germany', '1.300', '20.43%'],
-              ['AU', 'Australia', '760', '10.35%'],
-              ['GB', 'United Kingdom	', '690', '7.87%'],
-              ['RO', 'Romania', '600', '5.94%'],
-              ['BR', 'Brasil', '550', '4.34%']
+              ['P1', 'Project 1', '20	', '53.23%'],
+              ['P2', 'Project 2', '13', '20.43%'],
+              ['P3', 'Project 3', '7', '10.35%'],
+              ['P4', 'Project 4', '9', '7.87%'],
+              ['P5', 'Project 5', '0', '0.00%']
           ]
        };
       /* ----------==========     Daily Sales Chart initialization    ==========---------- */
