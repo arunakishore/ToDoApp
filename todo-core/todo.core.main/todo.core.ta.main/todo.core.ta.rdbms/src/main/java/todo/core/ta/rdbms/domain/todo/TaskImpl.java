@@ -15,8 +15,11 @@ public class TaskImpl extends BaseDomainImpl implements Task {
 
 	private static final long serialVersionUID = 1L;
 
-	@Column(name = "project_pk", nullable = false)
+	@Column(name = "project_pk")
 	private Long projectPK;
+
+	@Column(name = "user_pk", nullable = false)
+	private Long userPK;
 
 	@Column(name = "name", nullable = false)
 	private String name;
@@ -106,11 +109,19 @@ public class TaskImpl extends BaseDomainImpl implements Task {
 		this.actualTotalTime = actualTotalTime;
 	}
 
+	public Long getUserPK() {
+		return userPK;
+	}
+
+	public void setUserPK(Long userPK) {
+		this.userPK = userPK;
+	}
+
 	@Override
 	public String toString() {
-		return "TaskImpl [projectPK=" + projectPK + ", name=" + name + ", description=" + description + ", startDate="
-				+ startDate + ", endDate=" + endDate + ", plannedTotalTime=" + plannedTotalTime + ", actualTotalTime="
-				+ actualTotalTime + ", toString()=" + super.toString() + "]";
+		return "TaskImpl [projectPK=" + projectPK + ", userPK=" + userPK + ", name=" + name + ", description="
+				+ description + ", startDate=" + startDate + ", endDate=" + endDate + ", plannedTotalTime="
+				+ plannedTotalTime + ", actualTotalTime=" + actualTotalTime + ", toString()=" + super.toString() + "]";
 	}
 
 }

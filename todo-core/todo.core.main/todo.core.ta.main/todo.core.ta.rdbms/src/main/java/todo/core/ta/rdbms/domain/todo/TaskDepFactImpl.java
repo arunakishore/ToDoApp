@@ -15,11 +15,15 @@ public class TaskDepFactImpl implements TaskDepDomainFact<TaskDependencyImpl, Ta
 	}
 
 	public TaskDependencyImpl createAndPopulateUsingForm(TaskDependencyForm domainForm) {
-		return new TaskDependencyImpl();
-	}
 
-	public TaskDependencyImpl populateUsingForm(TaskDependencyForm domainForm) {
-		return new TaskDependencyImpl();
+		TaskDependencyImpl taskDepImpl = new TaskDependencyImpl();
+
+		taskDepImpl.setPK(domainForm.getPK());
+
+		taskDepImpl.setTaskPK(domainForm.getTaskPK());
+		taskDepImpl.setDependentPK(domainForm.getDependentPK());
+
+		return taskDepImpl;
 	}
 
 }

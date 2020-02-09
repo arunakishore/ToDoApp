@@ -10,7 +10,7 @@ public interface DomainFactory<T extends BaseDomain, F extends BaseDomainForm> {
 		return null;
 	}
 
-	default T populateUsingForm(F domainForm) {
+	default T populateUsingFormForUpdate(F domainForm, T domainObj) {
 		return null;
 	}
 

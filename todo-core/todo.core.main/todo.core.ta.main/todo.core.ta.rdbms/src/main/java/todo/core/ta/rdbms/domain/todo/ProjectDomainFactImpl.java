@@ -15,11 +15,19 @@ public class ProjectDomainFactImpl implements ProjectDomainFact<ProjectImpl, Pro
 	}
 
 	public ProjectImpl createAndPopulateUsingForm(ProjectForm domainForm) {
-		return new ProjectImpl();
-	}
 
-	public ProjectImpl populateUsingForm(ProjectForm domainForm) {
-		return new ProjectImpl();
+		ProjectImpl projectImpl = new ProjectImpl();
+
+		projectImpl.setPK(domainForm.getPK());
+		projectImpl.setStatus(domainForm.getStatus());
+
+		projectImpl.setName(domainForm.getName());
+		projectImpl.setDescription(domainForm.getDescription());
+
+		projectImpl.setStartDate(domainForm.getStartDate());
+		projectImpl.setEndDate(domainForm.getEndDate());
+
+		return projectImpl;
 	}
 
 }

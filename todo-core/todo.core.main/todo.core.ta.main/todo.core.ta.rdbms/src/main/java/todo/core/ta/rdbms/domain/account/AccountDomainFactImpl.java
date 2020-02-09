@@ -15,11 +15,16 @@ public class AccountDomainFactImpl implements AccountDomainFact<AccountImpl, Acc
 	}
 
 	public AccountImpl createAndPopulateUsingForm(AccountForm domainForm) {
-		return new AccountImpl();
-	}
 
-	public AccountImpl populateUsingForm(AccountImpl domainForm) {
-		return new AccountImpl();
+		AccountImpl acctImpl = new AccountImpl();
+
+		acctImpl.setPK(domainForm.getPK());
+		acctImpl.setStatus(acctImpl.getStatus());
+
+		acctImpl.setName(domainForm.getName());
+		acctImpl.setDescription(domainForm.getDescription());
+
+		return acctImpl;
 	}
 
 }

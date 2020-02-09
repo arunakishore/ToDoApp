@@ -9,6 +9,7 @@ public class TaskForm extends BaseDomainForm implements Task {
 	private String name;
 	private String description;
 	private Long projectPK;
+	private Long userPK;
 	private Date startDate;
 	private Date endDate;
 	private Double plannedTotalTime;
@@ -85,10 +86,20 @@ public class TaskForm extends BaseDomainForm implements Task {
 	}
 
 	@Override
+	public Long getUserPK() {
+		return this.userPK;
+	}
+
+	@Override
+	public void setUserPK(Long userPK) {
+		this.userPK = userPK;
+	}
+
+	@Override
 	public String toString() {
-		return "TaskForm [name=" + name + ", description=" + description + ", projectPK=" + projectPK + ", startDate="
-				+ startDate + ", endDate=" + endDate + ", plannedTotalTime=" + plannedTotalTime + ", actualTotalTime="
-				+ actualTotalTime + ", toString()=" + super.toString() + "]";
+		return "TaskForm [name=" + name + ", description=" + description + ", projectPK=" + projectPK + ", userPK="
+				+ userPK + ", startDate=" + startDate + ", endDate=" + endDate + ", plannedTotalTime="
+				+ plannedTotalTime + ", actualTotalTime=" + actualTotalTime + ", toString()=" + super.toString() + "]";
 	}
 
 }

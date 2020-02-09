@@ -20,6 +20,10 @@ public interface Task extends BaseDomain {
 
 	void setProjectPK(Long projectPK);
 
+	Long getUserPK();
+
+	void setUserPK(Long userPK);
+
 	Date getStartDate();
 
 	void setStartDate(Date startDate);

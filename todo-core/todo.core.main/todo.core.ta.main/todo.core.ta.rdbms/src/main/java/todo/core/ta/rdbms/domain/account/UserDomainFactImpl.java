@@ -15,11 +15,18 @@ public class UserDomainFactImpl implements UserDomainFact<UserImpl, UserForm> {
 	}
 
 	public UserImpl createAndPopulateUsingForm(UserForm domainForm) {
-		return new UserImpl();
-	}
 
-	public UserImpl populateUsingForm(UserForm domainForm) {
-		return new UserImpl();
+		UserImpl userImpl = new UserImpl();
+
+		userImpl.setPK(domainForm.getPK());
+		userImpl.setStatus(domainForm.getStatus());
+		
+		userImpl.setFirstName(domainForm.getFirstName());
+		userImpl.setLastName(domainForm.getLastName());
+		userImpl.setEmail(domainForm.getEmail());
+		userImpl.setUserName(domainForm.getUserName());
+
+		return userImpl;
 	}
 
 }

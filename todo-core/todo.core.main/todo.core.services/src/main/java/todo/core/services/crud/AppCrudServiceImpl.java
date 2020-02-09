@@ -21,8 +21,14 @@ public abstract class AppCrudServiceImpl<T extends BaseDomain, F extends BaseDom
 
 	@Override
 	public T update(F domainForm) throws Exception {
-		T domain = getDomainFactory().createAndPopulateUsingForm(domainForm);
-		return this.getAppCrudDao().update(domain);
+
+		// get from the database latest version of the database record
+		T domainObj = getAppCrudDao().getDomainUsingPk(domainForm.getDomainId());
+
+		// update input doaminForm object values with the database values
+		domainObj = getDomainFactory().populateUsingFormForUpdate(domainForm, domainObj);
+
+		return this.getAppCrudDao().update(domainObj);
 	}
 
 	@Override

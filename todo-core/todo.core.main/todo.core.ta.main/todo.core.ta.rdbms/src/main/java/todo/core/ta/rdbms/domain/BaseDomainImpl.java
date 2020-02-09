@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
@@ -20,9 +22,10 @@ public class BaseDomainImpl implements BaseDomain, Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long pk;
 
-	@Column(name = "status", length = 25, nullable = false)
+	@Column(name = "status", length = 25)
 	private String status;
 
 	@CreatedDate

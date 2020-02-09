@@ -3,7 +3,6 @@ package todo.core.ta.rdbms.domain.account;
 import org.springframework.stereotype.Component;
 
 import todo.core.common.constants.DBTypes;
-import todo.core.domain.account.AccountForm;
 import todo.core.domain.account.AccountUser;
 import todo.core.domain.account.AccountUserDomainFact;
 import todo.core.domain.account.AccountUserForm;
@@ -15,12 +14,17 @@ public class AccountUserDomainFactImpl implements AccountUserDomainFact<AccountU
 		return new AccountUserImpl();
 	}
 
-	public AccountUserImpl createAndPopulateUsingForm(AccountForm domainForm) {
-		return new AccountUserImpl();
-	}
+	public AccountUserImpl createAndPopulateUsingForm(AccountUserForm domainForm) {
 
-	public AccountUserImpl populateUsingForm(AccountImpl domainForm) {
-		return new AccountUserImpl();
+		AccountUserImpl acctUserImpl = new AccountUserImpl();
+
+		acctUserImpl.setPK(domainForm.getPK());
+		acctUserImpl.setStatus(domainForm.getStatus());
+
+		acctUserImpl.setAccountPK(domainForm.getAccountPK());
+		acctUserImpl.setUserPK(domainForm.getUserPK());
+
+		return acctUserImpl;
 	}
 
 }

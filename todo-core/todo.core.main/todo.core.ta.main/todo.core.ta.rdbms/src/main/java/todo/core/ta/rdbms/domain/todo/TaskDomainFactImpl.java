@@ -15,11 +15,16 @@ public class TaskDomainFactImpl implements TaskDomainFact<TaskImpl, TaskForm> {
 	}
 
 	public TaskImpl createAndPopulateUsingForm(TaskForm domainForm) {
-		return new TaskImpl();
-	}
 
-	public TaskImpl populateUsingForm(TaskForm domainForm) {
-		return new TaskImpl();
+		TaskImpl taskImpl = new TaskImpl();
+
+		taskImpl.setPK(domainForm.getPK());
+		taskImpl.setUserPK(domainForm.getUserPK());
+
+		taskImpl.setName(domainForm.getName());
+		taskImpl.setDescription(domainForm.getDescription());
+
+		return taskImpl;
 	}
 
 }
