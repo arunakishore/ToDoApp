@@ -14,10 +14,6 @@
 	<name>todo.platform.api</name>
 	<dependencies>
 		<dependency>
-			<groupId>todo.core.common</groupId>
-			<artifactId>todo.core.common</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -34,6 +30,30 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.common</groupId>
+			<artifactId>todo.core.common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.domain</groupId>
+			<artifactId>todo.core.domain</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.dao</groupId>
+			<artifactId>todo.core.dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.web</groupId>
+			<artifactId>todo.core.web</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>todo.core.services</groupId>
+			<artifactId>todo.core.services</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>todo.core.ta.main</groupId>

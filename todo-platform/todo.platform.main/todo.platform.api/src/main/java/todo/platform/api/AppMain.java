@@ -12,7 +12,8 @@ import todo.platform.api.config.ApiConfig;
 @SpringBootApplication
 @Import(ApiConfig.class)
 @EnableJpaRepositories(basePackages = { "todo.core.ta" })
-@ComponentScan(basePackages = { "todo.core.ta" })
+@ComponentScan(basePackages = { "todo.core.ta", "todo.core.common", "todo.core.dao", "todo.core.services",
+		"todo.core.web" })
 @EntityScan(basePackages = { "todo.core.ta" })
 public class AppMain {
 

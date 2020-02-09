@@ -11,7 +11,7 @@ import todo.core.domain.account.AccountUser;
 import todo.core.domain.account.AccountUserForm;
 import todo.core.services.crud.AppCrudServiceImpl;
 
-@Service("UserCrudServiceImpl")
+@Service("AccountUserCrudServiceImpl")
 public class AccountUserCrudServiceImpl extends AppCrudServiceImpl<AccountUser, AccountUserForm>
 		implements AccountUserCrudService {
 
