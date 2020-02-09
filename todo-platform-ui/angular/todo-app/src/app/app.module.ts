@@ -39,6 +39,9 @@ import {
 } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 
+// import the feature module here so you can add it to the imports array below
+import { ToDoAdminModule } from './to-do-admin/to-do-admin.module';
+
 import { AppComponent } from './app.component';
 
 import { SidebarModule } from './sidebar/sidebar.module';
@@ -101,7 +104,8 @@ export class MaterialModule {}
         SidebarModule,
         NavbarModule,
         FooterModule,
-        FixedpluginModule
+        FixedpluginModule,
+        ToDoAdminModule
     ],
     declarations: [
         AppComponent,
