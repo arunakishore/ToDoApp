@@ -5,6 +5,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import todo.core.common.constants.DBTypes;
+
 @Component(GlobalCtxAware.BEAN_ID)
 public class GlobalCtxAware implements ApplicationContextAware {
 
@@ -14,7 +16,7 @@ public class GlobalCtxAware implements ApplicationContextAware {
 	private static org.springframework.core.env.Environment environment;
 
 	// by default we assume RDBMS Technical Adapter
-	private static String crudDAOImplDefaultDBType = "rdbms";
+	public static String crudDAOImplDefaultDBType = DBTypes.RDBMS;
 
 	public static Object lookupFacade(String facadeBeanId) throws Exception {
 
@@ -31,7 +33,7 @@ public class GlobalCtxAware implements ApplicationContextAware {
 
 	public static String buildAppCrudDaoLookupBeanId(String domainType) {
 
-		return crudDAOImplDefaultDBType + "_" + domainType;
+		return crudDAOImplDefaultDBType + DBTypes.CRUD_DAO_IMPL_BEAN_ID_SEP_CHAR + domainType;
 	}
 
 }

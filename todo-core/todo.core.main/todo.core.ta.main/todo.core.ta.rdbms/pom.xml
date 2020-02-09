@@ -13,6 +13,11 @@
 	<name>todo.core.ta.rdbms</name>
 	<dependencies>
 		<dependency>
+			<groupId>todo.core.common</groupId>
+			<artifactId>todo.core.common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>todo.core.domain</groupId>
 			<artifactId>todo.core.domain</artifactId>
 			<version>${project.version}</version>

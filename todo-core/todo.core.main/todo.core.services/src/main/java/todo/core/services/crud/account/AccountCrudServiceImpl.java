@@ -14,7 +14,7 @@ public class AccountCrudServiceImpl extends AppCrudServiceImpl<Account> implemen
 	private String acctCrudDaoBeanId;
 
 	public AccountCrudServiceImpl() {
-		this.acctCrudDaoBeanId = GlobalCtxAware.buildAppCrudDaoLookupBeanId(Account.DOMAIN_TYPE);
+		this.acctCrudDaoBeanId = GlobalCtxAware.buildAppCrudDaoLookupBeanId(AccountCrudDao.BEAN_ID);
 	}
 
 	@SuppressWarnings("unchecked")
