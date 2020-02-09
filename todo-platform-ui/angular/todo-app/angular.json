@@ -180,8 +180,5 @@
       }
     }
   },
-  "defaultProject": "demo",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "demo"
 }
