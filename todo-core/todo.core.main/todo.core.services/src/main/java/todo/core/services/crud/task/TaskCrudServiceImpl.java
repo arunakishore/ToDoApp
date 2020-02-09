@@ -14,6 +14,7 @@ public class TaskCrudServiceImpl extends AppCrudServiceImpl<Task> {
 		this.acctCrudDaoBeanId = GlobalCtxAware.buildAppCrudDaoLookupBeanId(Task.DOMAIN_TYPE);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public AppCrudDao<Task> getAppCrudDao() throws Exception {
 		return GlobalCtxAware.appCtx.getBean(this.acctCrudDaoBeanId, TaskCrudDao.class);
