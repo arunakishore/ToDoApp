@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import todo.core.common.dto.GlobalCtxAware;
 import todo.core.dao.crud.AppCrudDao;
 import todo.core.dao.crud.task.ProjectCrudDao;
-import todo.core.domain.CoreDomainFactUtil;
+import todo.core.domain.DomainFactUtil;
 import todo.core.domain.DomainFactory;
 import todo.core.domain.task.Project;
 import todo.core.domain.task.ProjectForm;
@@ -28,7 +28,7 @@ public class ProjectCrudServiceImpl extends AppCrudServiceImpl<Project, ProjectF
 
 	@Override
 	public DomainFactory<Project, ProjectForm> getDomainFactory() {
-		return CoreDomainFactUtil.getProjectDomainFact();
+		return DomainFactUtil.getProjectDomainFact();
 	}
 
 }

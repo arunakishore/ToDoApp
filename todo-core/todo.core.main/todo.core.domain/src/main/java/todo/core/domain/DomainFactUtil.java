@@ -25,8 +25,8 @@ import todo.core.domain.task.TaskDependencyForm;
 import todo.core.domain.task.TaskDomainFact;
 import todo.core.domain.task.TaskForm;
 
-@Component("CoreDomainFactUtil")
-public class CoreDomainFactUtil {
+@Component("DomainFactUtil")
+public class DomainFactUtil {
 
 	private static String acctDomainFactBeanId = null;
 	private static String acctUserDomainFactBeanId = null;

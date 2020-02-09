@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import todo.core.common.dto.GlobalCtxAware;
 import todo.core.dao.crud.AppCrudDao;
 import todo.core.dao.crud.account.AccountUserCrudDao;
-import todo.core.domain.CoreDomainFactUtil;
+import todo.core.domain.DomainFactUtil;
 import todo.core.domain.DomainFactory;
 import todo.core.domain.account.AccountUser;
 import todo.core.domain.account.AccountUserForm;
@@ -28,7 +28,7 @@ public class AccountUserCrudServiceImpl extends AppCrudServiceImpl<AccountUser, 
 
 	@Override
 	public DomainFactory<AccountUser, AccountUserForm> getDomainFactory() {
-		return CoreDomainFactUtil.getAccontUserDomainFact();
+		return DomainFactUtil.getAccontUserDomainFact();
 	}
 
 }
