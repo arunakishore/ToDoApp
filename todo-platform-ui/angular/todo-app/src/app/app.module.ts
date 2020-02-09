@@ -52,6 +52,18 @@ import { AdminLayoutComponent } from './layouts/admin/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 
 import { AppRoutes } from './app.routing';
+import { CreateAccountComponent } from './todo/todo-main/todo-core/services/crud/account/create-account/create-account.component';
+import { EditAccountComponent } from './todo/todo-main/todo-core/services/crud/account/edit-account/edit-account.component';
+import { ListAccountComponent } from './todo/todo-main/todo-core/services/crud/account/list-account/list-account.component';
+import { CreateUserComponent } from './todo/todo-main/todo-core/services/crud/account/create-user/create-user.component';
+import { EditUserComponent } from './todo/todo-main/todo-core/services/crud/account/edit-user/edit-user.component';
+import { ListUserComponent } from './todo/todo-main/todo-core/services/crud/account/list-user/list-user.component';
+import { CreateProjectComponent } from './todo/todo-main/todo-core/services/crud/task/create-project/create-project.component';
+import { EditProjectComponent } from './todo/todo-main/todo-core/services/crud/task/edit-project/edit-project.component';
+import { ListProjectComponent } from './todo/todo-main/todo-core/services/crud/task/list-project/list-project.component';
+import { CreateTaskComponent } from './todo/todo-main/todo-core/services/crud/task/create-task/create-task.component';
+import { EditTaskComponent } from './todo/todo-main/todo-core/services/crud/task/edit-task/edit-task.component';
+import { ListTaskComponent } from './todo/todo-main/todo-core/services/crud/task/list-task/list-task.component';
 
 @NgModule({
   exports: [
@@ -86,7 +98,8 @@ import { AppRoutes } from './app.routing';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule
-  ]
+  ],
+  declarations: [CreateAccountComponent, EditAccountComponent, ListAccountComponent, CreateUserComponent, EditUserComponent, ListUserComponent, CreateProjectComponent, EditProjectComponent, ListProjectComponent, CreateTaskComponent, EditTaskComponent, ListTaskComponent]
 })
 export class MaterialModule {}
 
